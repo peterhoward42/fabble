@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package protocol;
+
+service StoreUser {
+  rpc Store(StoreRequest) returns (StoreResponse){}
+}
+
+message StoreRequest {
+  uint32 id = 1;
+  string name = 2;
+  string email = 3;
+  string phone = 4;
+}
+
+message StoreResponse {
+}
